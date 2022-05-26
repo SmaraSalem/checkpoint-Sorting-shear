@@ -1,0 +1,22 @@
+ALGORITHM tri-insertion
+VAR
+array_initiale : ARRAY_OF INTEGER[];
+array_triee : ARRAY_OF INTEGER[];
+indxG : INTEGER := -1 ;
+indxD INTEGER := 1 ;
+l : INTEGER := array_initiale.length;
+BEGIN
+write("donne un entier ");
+read (x) ;
+array_triee[0]:= x;
+  FOR i FROM 0 TO l-1 STEP 1  DO
+      IF ( array_initiale(i)> x  ) THEN
+          array_triee(indxD) = rray_initiale(i);
+          indxD +  = 1 ; 
+      END_IF
+    IF ( array_initiale(i)< x  ) THEN
+          array_triee(indxG) = rray_initiale(i);
+          indxG -  = 1 ; 
+      END_IF
+  END_FOR
+END
